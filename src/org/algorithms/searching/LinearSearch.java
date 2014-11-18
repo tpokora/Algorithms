@@ -1,5 +1,7 @@
 package org.algorithms.searching;
 
+import org.algorithms.Utils;
+
 /*
  * Simple LinearSearch class
  * 
@@ -11,15 +13,19 @@ public class LinearSearch {
 		int[] table = { 1, 5, 4, 3, 2, 6 };
 		int value = 3;
 		
-		System.out.println("linearSearch() - searched value is on index: " 
+		System.out.println("Linear searches in table: " + Utils.printTable(table));
+		
+		System.out.println("Linear search - searched value " + value + " is on index: " 
 				+ linearSearch.linearSearch(table, value));
 		
-		System.out.println("betterLinearSearch() - searched value is on index: " 
-				+ linearSearch.betterLinearSearch(table, value));
+		value = 4;
+		System.out.println("Better linear search - searched value " + value 
+				+ " is on index: " + linearSearch.betterLinearSearch(table, value));
 		
-		System.out.println("betterLinearSearchWithSentinel() " 
-				+ " - searched value is last, index: " 
-				+ linearSearch.linearSearchWithSentinel(table, 10));
+		value = 2;
+		System.out.println("better linear search with sentinel " 
+				+ "searched value " + value + " is on index: " 
+				+ linearSearch.linearSearchWithSentinel(table, value));
 	}
 	
 	/*
